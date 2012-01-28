@@ -1,6 +1,6 @@
 // ex. 8.12 tortoise and hare race
 // the point of using pass by reference with pointer arguments in this example is to directly modify values in main()
-//#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <cstdlib>
 #include <ctime>
