@@ -50,7 +50,6 @@ int main()
       counter++;
    } // end while
 
-
    return 0;
 }
 
@@ -146,7 +145,6 @@ int inputNewMovePlayer2()
             //cin >> row2;
             //cin.ignore(); // skip comma
             //cin >> col2;
-            
          }
          field[row2][col2] = 2;
       }
@@ -162,11 +160,9 @@ int inputNewMovePlayer2()
             //cin >> row2;
             //cin.ignore(); // skip comma
             //cin >> col2;
-            
          }
          field[row2][col2] = 2;
       }
-      
       cout << endl;
 }
 
@@ -205,43 +201,31 @@ int testForWin()
        {
          // vertical victory test
          if (field[j][i] == 1 && field[j][i+1] == 1 && field[j][i+2] == 1 && field[j][i+3] == 1)
-         {
             return 1;
-         }
+
          if (field[j][i] == 2 && field[j][i+1] == 2 && field[j][i+2] == 2 && field[j][i+3] == 2)
-         {
             return 2;
-         }
 
          // horizontal victory test
          if (field[j][i] == 1 && field[j+1][i] == 1 && field[j+2][i] == 1 && field[j+3][i] == 1)
-         {
             return 1;
-         }
+
          if (field[j][i] == 2 && field[j+1][i] == 2 && field[j+2][i] == 2 && field[j+3][i] == 2)
-         {
            return 2;
-         }
 
          // diagonal victory test (left to right)
          if(field[j][i] == 1 && field[j+1][i+1] == 1 && field[j+2][i+2] == 1 && field[j+3][i+3] == 1)
-         {
             return 1;
-         }
+
          if(field[j][i] == 2 && field[j+1][i+1] == 2 && field[j+2][i+2] == 2 && field[j+3][i+3] == 2)
-         {
            return 2;
-         }
 
          // diagonal victory test (right to left)
          if(field[j][i] == 1 && field[j-1][i+1] == 1 && field[j-2][i+2] == 1 && field[j-3][i+3] == 1)
-         {
             return 1;
-         }
+
          if(field[j][i] == 2 && field[j-1][i+1] == 2 && field[j-2][i+2] == 2 && field[j-3][i+3] == 2)
-         {
             return 2;
-         }
        }
      }
 }
