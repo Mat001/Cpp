@@ -26,7 +26,6 @@ int main()
 
    while (counter < 64) // ensures the game stops when all fields are full, in case there is no winner
    {
-
       inputNewMovePlayer1();
       displ(field);
       cout << endl;
@@ -78,10 +77,6 @@ int inputNewMovePlayer1()
       row1 = 1+rand() % 9;
       col1 = 1+rand() % 9;
       
-      //cin >> row1;
-      //cin.ignore(); // skip comma
-      //cin >> col1;
-
       if(field[row1][col1] == 0 && field[row1-1][col1] == 0 && field[row1+1][col1] != 0 && (row1 >= 1 && row1 <= 8 && col1 >= 1 && col1 <= 8))
          field[row1][col1] = 1;
       else if(field[row1][col1] != 0 || field[row1-1][col1] != 0 || field[row1+1][col1] == 0 || row1 < 1)
@@ -90,12 +85,8 @@ int inputNewMovePlayer1()
          {
             cout << "Player 1, repeat:" << endl;
             
-            //cin >> row1;
-            //cin.ignore(); // skip comma
-            //cin >> col1;
-            
-         row1 = 1+rand() % 9;
-         col1 = 1+rand() % 9;
+            row1 = 1+rand() % 9;
+            col1 = 1+rand() % 9;
          }
          field[row1][col1] = 1;
       }
@@ -106,12 +97,8 @@ int inputNewMovePlayer1()
          {
             cout << "Player 1, repeat:" << endl;
             
-            //cin >> row1;   // enter a row then comma then a column
-            //cin.ignore(); // skip comma
-            //cin >> col1;
-            
-         row1 = 1+rand() % 9;
-         col1 = 1+rand() % 9;
+            row1 = 1+rand() % 9;
+            col1 = 1+rand() % 9;
          }
          field[row1][col1] = 1;
       }
@@ -127,11 +114,6 @@ int inputNewMovePlayer2()
       row2 = 1+rand() % 9;
       col2 = 1+rand() % 9;
       
-      //cin >> row2;
-      //cin.ignore(); // skip comma
-      //cin >> col2;
-      
-
       if(field[row2][col2] == 0 && field[row2-1][col2] == 0 && field[row2+1][col2] != 0 && (row2 >= 1 && row2 <= 8 && col2 >= 1 && col2 <= 8))
          field[row2][col2] = 2;
       else if(field[row2][col2] != 0 || field[row2-1][col2] != 0 || field[row2+1][col2] == 0 || row2 < 1)
@@ -139,12 +121,8 @@ int inputNewMovePlayer2()
          while(field[row2][col2] != 0 || field[row2-1][col2] != 0 || field[row2+1][col2] == 0 || row2 < 1)
          {
             cout << "Player 2, repeat:" << endl;
-         row2 = 1+rand() % 9;
-         col2 = 1+rand() % 9;
-
-            //cin >> row2;
-            //cin.ignore(); // skip comma
-            //cin >> col2;
+            row2 = 1+rand() % 9;
+            col2 = 1+rand() % 9;
          }
          field[row2][col2] = 2;
       }
@@ -156,10 +134,6 @@ int inputNewMovePlayer2()
             cout << "Player 2, repeat:" << endl;
             row2 = 1+rand() % 9;
             col2 = 1+rand() % 9;
-
-            //cin >> row2;
-            //cin.ignore(); // skip comma
-            //cin >> col2;
          }
          field[row2][col2] = 2;
       }
@@ -233,5 +207,5 @@ int testForWin()
 // display the winner-------------------------------------------------------------------------------------
 void displayTheWinner()
 {
-   cout << "Player " << victory << " wins!" << endl;   // change for either player
+   cout << "Player " << victory << " wins!" << endl;   // change for the winning player
 }
