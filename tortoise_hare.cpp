@@ -117,7 +117,7 @@ void printRace(const int *const tPtr, const int *const hPtr)
       if(i == h)  cout << 'H';
    }
    cout << endl;
-  *////////////////////
+  */
 }
 
 void printWinner(const int *const tPtr, const int *const hPtr)
