@@ -1,5 +1,5 @@
 // tortoise and hare race
-// the point of using pass by reference with pointer arguments in this example is to directly modify values in main()
+// the point of using pass by reference with pointer arguments in this example is to directly modify variable values in main()
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
@@ -105,19 +105,7 @@ void printRace(const int *const tPtr, const int *const hPtr)
    else
       cout << setw( *tPtr ) << "T" << setw( *hPtr - *tPtr ) << "H";
    cout << '\n';  
-   /* Alternative display -- with an array instead of 'setw':
 
-   const int size = 70;
-   int array[size]={0};
-
-   for(int i=0; i<size+12; i++)    // added 1 to arraySize is cosmetic for the line
-   {
-      if(array[i] == 0) cout << "_";
-      if(i == t)  cout << 'T';
-      if(i == h)  cout << 'H';
-   }
-   cout << endl;
-  */
 }
 
 void printWinner(const int *const tPtr, const int *const hPtr)
