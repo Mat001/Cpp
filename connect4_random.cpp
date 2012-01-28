@@ -48,9 +48,7 @@ int main()
 
       counter++;
    } // end while
-
-   return 0;
-}
+} // end main
 
 
 
