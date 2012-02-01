@@ -1,5 +1,4 @@
-
-// Exercise 8.15, Quicksort
+// Quicksort -- in progress
 
 #include <iostream>
 using namespace std;
